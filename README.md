@@ -2,7 +2,7 @@ Galaxy Toolshed Hooks
 =====================
 
 Here you can find [mercurial] hooks for an easy deployment of large and complex [toolshed] repositories, like [ChemicalToolBoX]. 
-If you have meta-packages with several dependend orphan tool dependencies and tool repositories updating can be complicated.
+If you have meta-packages with several dependent orphan tool dependencies and tool repositories updating can be complicated.
 
 These hooks will make it easier for you! 
 The idea is to automatically update definitions of repository dependencies such as:
