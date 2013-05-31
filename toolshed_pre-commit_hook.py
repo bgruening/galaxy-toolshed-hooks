@@ -53,6 +53,10 @@ def add_latest_rev_and_toolshed(repo, **kwargs):
     """
     toolshed_url = "http://testtoolshed.g2.bx.psu.edu/"
 
+    # to force a commit the user can add a temporary file called: force_pre-commit_hook_temp_file
+    # we will forget that file, because it should only force the execution of that function
+    commands.forget( ui.ui(), repo, 'force_pre-commit_hook_temp_file' )
+
     logging.info('Emtering pre-commit Hook: Updating "toolshed" and/or "changeset_revision" attribute.')
     filename_categories = repo.status( clean=True )
     filepaths = [item for sublist in filename_categories for item in sublist]
